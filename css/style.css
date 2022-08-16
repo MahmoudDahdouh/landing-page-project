@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    font-size: 16px;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page__container {
+    margin: 0 auto;
+    width: 1170px;
+}
+
+main {
+    min-height: calc(100vh - 160px);
+}
+
+/* Typography */
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+/* Navigation style */
+.page__header {
+    background-color: #121212;
+    color: white;
+}
+
+/* logo */
+.page__logo p {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Navbar */
+.page__header .page__container {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__menu {
+    height: 100%;
+}
+
+.navbar__menu ul {
+    display: flex;
+    list-style: none;
+    height: 100%;
+}
+
+.navbar__menu ul li {
+    height: 100%;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    transition: background-color .25s ease, color .25s ease;
+}
+
+.navbar__menu ul li:hover,
+.nav--active {
+    background-color: white;
+    color: #121212;
+}
+
+/* Main */
+/* hero */
+.main__hero {
+    height: 400px;
+    color: #121212;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__hero h1 {
+    font-size: 4rem;
+}
+
+/* Sections */
+section {
+    padding-bottom: 10rem;
+}
+
+section p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding-bottom: 1rem;
+}
+
+.section__title {
+    font-size: 4rem;
+    padding: 5rem 0;
+    text-decoration: underline;
+}
+
+/* footer */
+.page__footer {
+    height: 80px;
+    background-color: #121212;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page__footer p {
+    text-align: center;
+}
+
+/* Responsive rules */
+@media (max-width: 1200px) {
+    .page__container {
+        width: 670px;
+    }
+}
+
+@media (max-width: 700px) {
+    .page__container {
+        width: 470px;
+    }
+
+    .page__header .page__container {
+        display: block;
+        height: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .page__container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .page__header .page__container {
+        display: block;
+        height: auto;
+    }
+
+    .navbar__menu ul {
+        display: block;
+    }
+
+    .main__hero h1,
+    .section__title {
+        font-size: 2rem;
+    }
+}
