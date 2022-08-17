@@ -3,6 +3,8 @@
 ## Description
 A landing page using HTML, CSS, and JavaScript with a dynamic navigation bar. Every navigation item leads the user to a specific section.
 
+Show landing page demo <a href="https://MahmoudDahdouh.github.io/landing-page-project/" target="_blank">This link</a>
+
 ## Languages and technologies
 The languages and technologies used in this project:
 * HTML5
