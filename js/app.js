@@ -23,11 +23,37 @@ document.querySelector('li').classList.add('nav--active')
 navbar.addEventListener('click', event => {
     // on click item
     const id = event.target.id.replace('item_', '')
-    document.querySelector(`#${id}`).scrollIntoView()
 
+    // scroll to view with smooth
+    const section = document.querySelector(`#${id}`)
+    section.scrollIntoView({ behavior: "smooth" })
+
+    // set active class to nav items
     document.querySelectorAll('li').forEach((item) => {
         item.classList.remove('nav--active')
     })
 
     document.querySelector(`#${event.target.id}`).classList.add('nav--active')
+
+    // set active class to section
+    sections.forEach((section) => {
+        section.classList.remove('active')
+    })
+    section.classList.add('active')
 })
+
+
+// on scroll
+window.onscroll = () => {
+    const scrollTop = document.documentElement.scrollTop
+
+    for (let i = sections.length - 1; i >= 0; i--) {
+        if (scrollTop + 100 > sections[i].offsetTop) {
+            sections.forEach((item) => {
+                item.classList.remove('active')
+            })
+            sections[i].classList.add("active")
+            break;
+        }
+    }
+}
